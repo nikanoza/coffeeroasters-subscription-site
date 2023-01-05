@@ -1,13 +1,15 @@
 import { lazy, Suspense } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
+import { Header } from "./layouts";
 
-const Home = lazy(() => import("pages/Home"));
-const About = lazy(() => import("pages/About"));
-const Subscribe = lazy(() => import("pages/Subscribe"));
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const Subscribe = lazy(() => import("./pages/Subscribe"));
 
 function App() {
   return (
-    <div className="w-screen">
+    <div className="w-screen px-6">
+      <Header />
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
         <Route
