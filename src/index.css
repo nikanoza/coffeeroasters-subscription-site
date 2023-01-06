@@ -1,3 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&family=Fraunces:opsz,wght@9..144,900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .barlow {
+    font-family: "Barlow", sans-serif;
+  }
+  .fraunces {
+    font-family: "Fraunces", serif;
+  }
+  .home-poster-mobile {
+    background-image: url(./assets/home/mobile/image-hero-coffeepress.jpg);
+  }
+}
