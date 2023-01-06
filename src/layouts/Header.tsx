@@ -6,7 +6,7 @@ const Header = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
   return (
-    <div className="fixed w-full h-[90px] left-0 top-0 px-6 flex justify-between items-center">
+    <div className="fixed z-10 w-full h-[90px] left-0 top-0 px-6 flex justify-between items-center bg-white">
       <Logo />
       {showMenu ? (
         <div className="fixed left-0 top-[90px] w-screen px-6 h-screen bg-menu-back flex flex-col items-center">
