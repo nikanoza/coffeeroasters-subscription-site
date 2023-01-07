@@ -1,5 +1,6 @@
 import { Danche, GranEspresso, Piccollo, Planalto } from "../../assets";
-import { Coffee } from "../../types";
+import { CardType, Coffee } from "../../types";
+import { CoffeeIcon, Gift, Truck } from "../../svg";
 
 export const coffees: Coffee[] = [
   {
@@ -25,5 +26,26 @@ export const coffees: Coffee[] = [
     title: "Danche",
     description:
       "Ethiopian hand-harvested blend densely packed with vibrant fruit notes",
+  },
+];
+
+export const CardItems: CardType[] = [
+  {
+    image: CoffeeIcon,
+    title: "Best quality",
+    description:
+      "Discover an endless variety of the world’s best artisan coffee from each of our roasters.",
+  },
+  {
+    image: Gift,
+    title: "Exclusive benefits",
+    description:
+      "Special offers and swag when you subscribe, including 30% off your first shipment.",
+  },
+  {
+    image: Truck,
+    title: "Free shipping",
+    description:
+      "We cover the cost and coffee is delivered fast. Peak freshness: guaranteed.",
   },
 ];

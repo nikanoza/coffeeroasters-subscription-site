@@ -26,4 +26,10 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  .cardsBackground {
+    background-image: url(./assets/home/mobile/card-bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 100% 902px;
+  }
 }

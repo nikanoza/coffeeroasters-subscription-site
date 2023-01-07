@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { Collection } from "../../components";
-import { coffees } from "./helpers";
+import { Cards, Collection } from "../../components";
+import { CardItems, coffees } from "./helpers";
 
 const Home = () => {
   return (
@@ -22,6 +22,7 @@ const Home = () => {
         </Link>
       </div>
       <Collection items={coffees} />
+      <Cards items={CardItems} />
     </div>
   );
 };

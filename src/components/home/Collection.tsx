@@ -14,6 +14,7 @@ const Collection: React.FC<{ items: Coffee[] }> = (props) => {
         {props.items.map((coffee) => {
           return (
             <CoffeeItem
+              key={coffee.title}
               image={coffee.image}
               title={coffee.title}
               description={coffee.description}
