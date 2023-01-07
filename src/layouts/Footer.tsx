@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Logo } from "../svg";
+import { Github, Linkedin, Logo } from "../svg";
 
 const Footer = () => {
   return (
@@ -26,6 +26,17 @@ const Footer = () => {
         >
           Create Your Plan
         </Link>
+      </ul>
+      <ul className="list-none flex gap-x-6 items-center mt-12">
+        <a href="https://github.com/nikanoza" target="_blank">
+          <Github />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/nika-nozadze-67b62a210/"
+          target="_blank"
+        >
+          <Linkedin />
+        </a>
       </ul>
     </div>
   );
