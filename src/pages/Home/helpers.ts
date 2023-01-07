@@ -1,5 +1,5 @@
 import { Danche, GranEspresso, Piccollo, Planalto } from "../../assets";
-import { CardType, Coffee } from "../../types";
+import { CardType, Coffee, StepType } from "../../types";
 import { CoffeeIcon, Gift, Truck } from "../../svg";
 
 export const coffees: Coffee[] = [
@@ -29,7 +29,7 @@ export const coffees: Coffee[] = [
   },
 ];
 
-export const CardItems: CardType[] = [
+export const cardItems: CardType[] = [
   {
     image: CoffeeIcon,
     title: "Best quality",
@@ -47,5 +47,26 @@ export const CardItems: CardType[] = [
     title: "Free shipping",
     description:
       "We cover the cost and coffee is delivered fast. Peak freshness: guaranteed.",
+  },
+];
+
+export const stepsData: StepType[] = [
+  {
+    step: "01",
+    title: "Pick your coffee",
+    description:
+      "Select from our evolving range of artisan coffees. Our beans are ethically sourced and we pay fair prices for them. There are new coffees in all profiles every month for you to try out.",
+  },
+  {
+    step: "02",
+    title: "Choose the frequency",
+    description:
+      "Customize your order frequency, quantity, even your roast style and grind type. Pause, skip or cancel your subscription with no commitment through our online portal.",
+  },
+  {
+    step: "03",
+    title: "Receive and enjoy!",
+    description:
+      "We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience.",
   },
 ];

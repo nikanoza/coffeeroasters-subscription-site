@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import { Cards, Collection } from "../../components";
-import { CardItems, coffees } from "./helpers";
+import { Cards, Collection, Steps } from "../../components";
+import { cardItems, coffees, stepsData } from "./helpers";
 
 const Home = () => {
   return (
-    <div className="w-full pt-[90px] pb-[538px] px-6">
+    <div className="w-full pt-[90px] px-6">
       <div className="w-full h-[500px] rounded-[10px] home-poster-mobile bg-no-repeat bg-center bg-cover px-6 flex flex-col items-center justify-center">
         <h1 className="fraunces font-black text-[40px] leading-10 text-light">
           Great coffee made simple.
@@ -22,7 +22,8 @@ const Home = () => {
         </Link>
       </div>
       <Collection items={coffees} />
-      <Cards items={CardItems} />
+      <Cards items={cardItems} />
+      <Steps items={stepsData} />
     </div>
   );
 };
