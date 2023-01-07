@@ -3,7 +3,7 @@ import Card from "./Card";
 
 const Cards: React.FC<{ items: CardType[] }> = (props) => {
   return (
-    <div className="mt-[120px] w-full cardsBackground flex flex-col items-center p-6">
+    <div className="mt-[120px] w-full cardsBackground flex flex-col items-center px-6">
       <h2 className="fraunces font-black text-[28px] leading-[28px] text-light mt-16">
         Why choose us?
       </h2>

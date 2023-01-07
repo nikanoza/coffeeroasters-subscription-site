@@ -1,8 +1,6 @@
-import { CoffeeIcon } from "../../svg";
-import { CardType, Coffee } from "../../types";
+import { CardType } from "../../types";
 
 const Card: React.FC<CardType> = (props) => {
-  console.log(props.image);
   return (
     <div className="w-full bg-hulk rounded-lg flex flex-col items-center pb-12">
       <div className="mt-[72px]">{<props.image />}</div>

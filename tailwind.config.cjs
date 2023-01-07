@@ -14,6 +14,7 @@ module.exports = {
         light: "#FEFCF7",
         hulk: "#0E8784",
         gray: "#83888F",
+        cream: "#FDD6BA",
       },
     },
   },

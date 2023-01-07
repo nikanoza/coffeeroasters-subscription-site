@@ -11,3 +11,9 @@ export type CardType = {
   title: string;
   description: string;
 };
+
+export type StepType = {
+  step: string;
+  title: string;
+  description: string;
+};
