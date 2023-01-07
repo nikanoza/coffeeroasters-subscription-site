@@ -7,7 +7,7 @@ const Header = () => {
 
   return (
     <div className="fixed z-10 w-full h-[90px] left-0 top-0 px-6 flex justify-between items-center bg-white">
-      <Logo />
+      <Logo color="#333D4B" />
       {showMenu ? (
         <div className="fixed left-0 top-[90px] w-screen px-6 h-screen bg-menu-back flex flex-col items-center">
           <div className="fixed right-6 top-10">

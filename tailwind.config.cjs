@@ -15,6 +15,7 @@ module.exports = {
         hulk: "#0E8784",
         gray: "#83888F",
         cream: "#FDD6BA",
+        footerBg: "#2C343E",
       },
     },
   },
