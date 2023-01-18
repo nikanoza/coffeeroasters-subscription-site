@@ -8,7 +8,7 @@ const Subscribe = lazy(() => import("./pages/Subscribe"));
 
 function App() {
   return (
-    <div className="w-screen pb-[72px]">
+    <div className="w-full pb-[72px]">
       <Header />
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
@@ -37,7 +37,7 @@ function App() {
           }
         />
       </Routes>
-      <div className="px-6 w-full mt-[120px]">
+      <div className="px-6 w-full mt-[120px] md:px-10 md:mt-36 xl:mt-[200px]">
         <Footer />
       </div>
     </div>

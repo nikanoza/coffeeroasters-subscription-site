@@ -14,6 +14,13 @@
   .home-poster-mobile {
     background-image: url(./assets/home/mobile/image-hero-coffeepress.jpg);
   }
+
+  .home-poster-tablet {
+    background-image: url(./assets/home/tablet/image-hero-coffeepress.jpg);
+  }
+  .home-poster-desktop {
+    background-image: url(./assets/home/desktop/image-hero-coffeepress.jpg);
+  }
   .transform-menu {
     transform: matrix(1, 0, 0, -1, 0, 0);
   }
@@ -31,5 +38,16 @@
     background-image: url(./assets/home/mobile/card-bg-mobile.png);
     background-repeat: no-repeat;
     background-size: 100% 902px;
+  }
+
+  .cards-background-tablet {
+    background-image: url(./assets/home/tablet/cards-bg-tablet.png);
+    background-repeat: no-repeat;
+    background-size: 100% 573px;
+  }
+  .card-background-desktop {
+    background-image: url(./assets/home/desktop/card-bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 100% 577px;
   }
 }
