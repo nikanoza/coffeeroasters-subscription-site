@@ -27,6 +27,9 @@
   .commitment-poster-mobile {
     background-image: url(./assets/about/mobile/image-commitment.jpg);
   }
+  .quality-poster-mobile {
+    background-image: url(./assets/about/mobile/image-quality.jpg);
+  }
   .transform-menu {
     transform: matrix(1, 0, 0, -1, 0, 0);
   }

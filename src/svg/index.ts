@@ -6,3 +6,6 @@ export { default as Gift } from "./Gift";
 export { default as Truck } from "./Truck";
 export { default as Github } from "./Github";
 export { default as Linkedin } from "./Linkedin";
+export { default as Australia } from "./Australia";
+export { default as Canada } from "./Canada";
+export { default as Uk } from "./Uk";

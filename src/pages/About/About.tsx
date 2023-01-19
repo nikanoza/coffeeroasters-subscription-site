@@ -1,4 +1,4 @@
-import { Commitment } from "../../components";
+import { Commitment, Headquarters, Quality } from "../../components";
 
 const About = () => {
   return (
@@ -15,6 +15,8 @@ const About = () => {
         </p>
       </div>
       <Commitment />
+      <Quality />
+      <Headquarters />
     </div>
   );
 };
