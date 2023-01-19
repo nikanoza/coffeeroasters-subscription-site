@@ -21,6 +21,12 @@
   .home-poster-desktop {
     background-image: url(./assets/home/desktop/image-hero-coffeepress.jpg);
   }
+  .about-poster-mobile {
+    background-image: url(./assets/about/mobile/image-hero-whitecup.jpg);
+  }
+  .commitment-poster-mobile {
+    background-image: url(./assets/about/mobile/image-commitment.jpg);
+  }
   .transform-menu {
     transform: matrix(1, 0, 0, -1, 0, 0);
   }
