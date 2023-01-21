@@ -18,3 +18,13 @@ export type StepType = {
   description: string;
   noHome: boolean | undefined;
 };
+
+export type Subscribe = {
+  preferences: "capsule" | "filter" | "espresso" | null;
+  type: "single origin" | "decaf" | "blended" | null;
+  quantity: "250g" | "500g" | "1000g" | null;
+  grind: "wholebean" | "filter" | "cafetiére" | null;
+  deliveries: "every week" | "every 2 weeks" | "every month" | null;
+};
+
+export type Key = keyof Subscribe;
