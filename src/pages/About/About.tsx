@@ -3,7 +3,7 @@ import { Commitment, Headquarters, Quality } from "../../components";
 const About = () => {
   return (
     <div className="w-full mt-[90px] px-6 md:mt-[119px] md:px-10 xl:px-20">
-      <div className="w-full h-[400px] rounded-[10px] bg-no-repeat bg-center bg-cover px-6 flex flex-col items-center about-poster-mobile">
+      <div className="w-full h-[400px] rounded-[10px] bg-no-repeat bg-center bg-cover px-6 flex flex-col items-center about-poster-mobile md:about-poster-tablet md:items-start md:px-14">
         <h1 className="fraunces font-black text-[28px] leading-[28px] text-light mt-[111px]">
           About Us
         </h1>

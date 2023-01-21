@@ -2,17 +2,17 @@ import { Australia, Canada, Uk } from "../../svg";
 
 const Headquarters = () => {
   return (
-    <div className="mt-[120px] flex flex-col items-center">
+    <div className="mt-[120px] flex flex-col items-center md:mt-36 md:items-start">
       <h2 className="fraunces font-black text-2xl text-gray">
         Our headquarters
       </h2>
-      <div className="mt-[72px] flex flex-col items-center gap-y-20">
-        <div className="flex flex-col items-center">
+      <div className="mt-[72px] flex flex-col items-center gap-y-20 md:flex-row md:gap-x-6">
+        <div className="flex flex-col items-center md:items-start">
           <Uk />
           <h2 className="mt-12 fraunces font-black text-[28px] leading-9 text-darkBlue">
             United Kingdom
           </h2>
-          <ul className="flex flex-col items-center gap-y-2 mt-5">
+          <ul className="flex flex-col items-center gap-y-2 mt-5 md:items-start">
             <span className="barlow font-normal text-base text-darkBlue">
               68 Asfordby Rd
             </span>
@@ -27,12 +27,12 @@ const Headquarters = () => {
             </span>
           </ul>
         </div>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center md:items-start">
           <Canada />
           <h2 className="mt-12 fraunces font-black text-[28px] leading-9 text-darkBlue">
             Canada
           </h2>
-          <ul className="flex flex-col items-center gap-y-2 mt-5">
+          <ul className="flex flex-col items-center gap-y-2 mt-5 md:items-start">
             <span className="barlow font-normal text-base text-darkBlue">
               1528 Eglinton Avenue
             </span>
@@ -47,12 +47,12 @@ const Headquarters = () => {
             </span>
           </ul>
         </div>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center md:items-start">
           <Australia />
           <h2 className="mt-12 fraunces font-black text-[28px] leading-9 text-darkBlue">
             Australia
           </h2>
-          <ul className="flex flex-col items-center gap-y-2 mt-5">
+          <ul className="flex flex-col items-center gap-y-2 mt-5 md:items-start">
             <span className="barlow font-normal text-base text-darkBlue">
               36 Swanston Street
             </span>

@@ -29,7 +29,7 @@ function App() {
           }
         />
         <Route
-          path="subscribe"
+          path="/subscribe"
           element={
             <Suspense>
               <Subscribe />

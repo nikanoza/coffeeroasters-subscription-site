@@ -16,4 +16,5 @@ export type StepType = {
   step: string;
   title: string;
   description: string;
+  noHome: boolean | undefined;
 };

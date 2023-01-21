@@ -24,11 +24,39 @@
   .about-poster-mobile {
     background-image: url(./assets/about/mobile/image-hero-whitecup.jpg);
   }
+  .about-poster-tablet {
+    background-image: url(./assets/about/tablet/image-hero-whitecup.jpg);
+  }
+  .about-poster-desktop {
+    background-image: url(./assets/about/desktop/image-hero-whitecup.jpg);
+  }
   .commitment-poster-mobile {
     background-image: url(./assets/about/mobile/image-commitment.jpg);
   }
+  .commitment-poster-tablet {
+    background-image: url(./assets/about/tablet/image-commitment.jpg);
+  }
+  .commitment-poster-desktop {
+    background-image: url(./assets/about/desktop/image-commitment.jpg);
+  }
   .quality-poster-mobile {
     background-image: url(./assets/about/mobile/image-quality.jpg);
+  }
+  .quality-poster-tablet {
+    background-image: url(./assets/about/tablet/image-quality.jpg);
+    background-size: 100% 320px;
+  }
+  .quality-poster-desktop {
+    background-image: url(./assets/about/desktop/image-quality.jpg);
+  }
+  .subscribe-poster-mobile {
+    background-image: url(./assets/plan/mobile/image-hero-blackcup.jpg);
+  }
+  .subscribe-poster-tablet {
+    background-image: url(./assets/plan/tablet/image-hero-blackcup.jpg);
+  }
+  .subscribe-poster-desktop {
+    background-image: url(./assets/plan/desktop/image-hero-blackcup.jpg);
   }
   .transform-menu {
     transform: matrix(1, 0, 0, -1, 0, 0);
