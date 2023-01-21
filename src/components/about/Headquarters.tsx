@@ -2,14 +2,14 @@ import { Australia, Canada, Uk } from "../../svg";
 
 const Headquarters = () => {
   return (
-    <div className="mt-[120px] flex flex-col items-center md:mt-36 md:items-start">
+    <div className="mt-[120px] flex flex-col items-center md:mt-36 md:items-start xl:mt-40 xl:ml-20">
       <h2 className="fraunces font-black text-2xl text-gray">
         Our headquarters
       </h2>
-      <div className="mt-[72px] flex flex-col items-center gap-y-20 md:flex-row md:gap-x-6">
+      <div className="mt-[72px] flex flex-col items-center gap-y-20 md:flex-row md:gap-x-6 xl:gap-x-24">
         <div className="flex flex-col items-center md:items-start">
           <Uk />
-          <h2 className="mt-12 fraunces font-black text-[28px] leading-9 text-darkBlue">
+          <h2 className="mt-12 fraunces font-black text-[28px] leading-9 text-darkBlue xl:text-[32px] xl:leading-[36px]">
             United Kingdom
           </h2>
           <ul className="flex flex-col items-center gap-y-2 mt-5 md:items-start">

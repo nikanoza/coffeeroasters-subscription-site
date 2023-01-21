@@ -48,6 +48,7 @@
   }
   .quality-poster-desktop {
     background-image: url(./assets/about/desktop/image-quality.jpg);
+    background-size: 100% 100%;
   }
   .subscribe-poster-mobile {
     background-image: url(./assets/plan/mobile/image-hero-blackcup.jpg);
