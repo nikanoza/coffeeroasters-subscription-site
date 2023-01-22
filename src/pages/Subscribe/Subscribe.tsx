@@ -69,7 +69,7 @@ const SubscribePage = () => {
           ref={backdrop}
           onClick={closeModal}
         >
-          <div className="w-full rounded-lg bg-light">
+          <div className="w-full rounded-lg bg-light xl:w-[540px]">
             <div className="w-full h-[88px] bg-darkBlue rounded-t-lg fraunces font-black text-3xl text-white flex items-center p-6 mb-10 md:px-14 md:text-[40px] md:leading-[48px] md:h-[136px] md:mb-6">
               Order Summary
             </div>
