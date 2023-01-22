@@ -19,7 +19,7 @@ const Button: React.FC<PropsType> = ({
   return (
     <button
       className={
-        "w-full p-6 rounded-lg outline-none border-none flex flex-col items-start " +
+        "w-full p-6 rounded-lg outline-none border-none flex flex-col items-start md:py-8 md:h-[250px] xl:px-7 " +
         bg
       }
       onClick={() => onClick()}
@@ -27,7 +27,11 @@ const Button: React.FC<PropsType> = ({
       <h2 className={"fraunces font-black capitalize text-2xl " + color}>
         {title}
       </h2>
-      <p className={"mt-2 barlow font-normal text-base text-left " + color}>
+      <p
+        className={
+          "mt-2 barlow font-normal text-base text-left md:mt-6 " + color
+        }
+      >
         {description}
       </p>
     </button>

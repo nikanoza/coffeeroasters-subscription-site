@@ -30,10 +30,10 @@ const Question: React.FC<PropsType> = ({
     }
   }, [disabled]);
   return (
-    <div className={disabled ? "opacity-70" : ""} id={property}>
+    <div className={disabled ? "opacity-70 w-full" : "w-full"} id={property}>
       <div className="flex items-center justify-between w-full">
         <p
-          className="fraunces font-black text-2xl text-gray w-[240px]"
+          className="fraunces font-black text-2xl text-gray w-[240px] cursor-pointer md:w-fit md:text-[32px] md:leading-[48px]"
           onClick={() => {
             return !disabled ? setShowAnswers(!showAnswers) : null;
           }}
@@ -49,7 +49,7 @@ const Question: React.FC<PropsType> = ({
         </div>
       </div>
       {showAnswers ? (
-        <ul className="mt-8 list-none flex flex-col w-full gap-y-4">
+        <ul className="mt-8 list-none flex flex-col w-full gap-y-4 md:flex-row md:gap-x-3">
           {buttons.map((button) => (
             <Button
               key={button.title}

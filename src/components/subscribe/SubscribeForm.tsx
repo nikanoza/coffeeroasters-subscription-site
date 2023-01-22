@@ -1,3 +1,4 @@
+import { useSummery } from "../../hooks";
 import { Subscribe } from "../../types";
 import Question from "./Question";
 
@@ -7,6 +8,7 @@ type PropsType = {
     property: keyof Subscribe,
     value: Subscribe[keyof Subscribe]
   ) => void;
+  showModal: () => void;
 };
 
 const preferences: {
@@ -108,111 +110,118 @@ const deliveries: {
   },
 ];
 
-const SubscribeForm: React.FC<PropsType> = ({ plan, updatePlan }) => {
-  const summery = (
-    <p className="w-full fraunces font-black text-2xl text-white mt-8">
-      “I drink my coffee as
-      {
-        <span className="text-hulk capitalize">
-          {plan.preferences || "_____"}
-        </span>
-      }
-      , with a
-      {<span className="text-hulk capitalize"> {plan.type || "_____"}</span>}{" "}
-      type of bean.
-      {
-        <span className="text-hulk capitalize">
-          {" "}
-          {plan.quantity || "_____"}
-        </span>
-      }{" "}
-      ground ala
-      {<span className="text-hulk capitalize"> {plan.grind || "_____"}</span>},
-      sent to me
-      {
-        <span className="text-hulk capitalize">
-          {plan.deliveries || "_____"}
-        </span>
-      }
-      .”
-    </p>
-  );
+const SubscribeForm: React.FC<PropsType> = ({
+  plan,
+  updatePlan,
+  showModal,
+}) => {
+  const summery = useSummery(plan, "white");
+  const disabledBtn =
+    plan.preferences === "capsule"
+      ? plan.deliveries && plan.preferences && plan.quantity && plan.type
+      : plan.deliveries &&
+        plan.preferences &&
+        plan.quantity &&
+        plan.type &&
+        plan.grind;
 
-  const noGridSummery = (
-    <p className="w-full fraunces font-black text-2xl text-white mt-8">
-      “I drink my coffee using
-      {<span className="text-hulk capitalize"> Capsules</span>}, with a
-      {<span className="text-hulk capitalize"> {plan.type || "_____"}</span>}{" "}
-      type of bean.
-      {
-        <span className="text-hulk capitalize">
-          {" "}
-          {plan.quantity || "_____"}
-        </span>
-      }
-      , sent to me
-      {
-        <span className="text-hulk capitalize">
-          {plan.deliveries || "_____"}
-        </span>
-      }
-      .”
-    </p>
-  );
+  const opacity = plan.preferences === "capsule" ? "opacity-25" : "opacity-100";
 
   return (
-    <div className="mt-[120px] w-full flex flex-col items-center">
-      <div className="w-full flex flex-col gap-y-[110px]">
-        <Question
-          plan={plan}
-          updatePlan={updatePlan}
-          property="preferences"
-          question="How do you drink your coffee?"
-          buttons={preferences}
-          disabled={false}
-        />
-        <Question
-          plan={plan}
-          updatePlan={updatePlan}
-          property="type"
-          question="What type of coffee?"
-          buttons={types}
-          disabled={false}
-        />
-        <Question
-          plan={plan}
-          updatePlan={updatePlan}
-          property="quantity"
-          question="How much would you like?"
-          buttons={quantities}
-          disabled={false}
-        />
-        <Question
-          plan={plan}
-          updatePlan={updatePlan}
-          property="grind"
-          question="Want us to grind them?"
-          buttons={grinds}
-          disabled={plan.preferences === "capsule"}
-        />
-        <Question
-          plan={plan}
-          updatePlan={updatePlan}
-          property="deliveries"
-          question="How often should we deliver?"
-          buttons={deliveries}
-          disabled={false}
-        />
+    <div
+      className="mt-[120px] w-full xl:mt-40 xl:flex items-start xl:px-20 xl:gap-x-24 2xl:gap-x-[125px]"
+      id="plan"
+    >
+      <div className="hidden xl:flex xl:flex-col xl:gap-y-6 w-[255px]">
+        <a
+          href="#preferences"
+          className="fraunces font-black text-2xl no-underline"
+        >
+          <span className="text-hulk mr-7">01</span>Preferences
+        </a>
+        <div className="w-full h-[1px] bg-gray opacity-25"></div>
+        <a href="#type" className="fraunces font-black text-2xl no-underline">
+          <span className="text-hulk mr-7">02</span>Bean Type
+        </a>
+        <div className="w-full h-[1px] bg-gray opacity-25"></div>
+        <a
+          href="#quantity"
+          className="fraunces font-black text-2xl no-underline"
+        >
+          <span className="text-hulk mr-7">03</span>Quantity
+        </a>
+        <div className="w-full h-[1px] bg-gray opacity-25"></div>
+        <a
+          href={plan.preferences === "capsule" ? "#plan" : "#grind"}
+          className={"fraunces font-black text-2xl no-underline " + opacity}
+        >
+          <span className="text-hulk mr-7">04</span>Grind Option
+        </a>
+        <div className="w-full h-[1px] bg-gray opacity-25"></div>
+        <a
+          href="#deliveries"
+          className="fraunces font-black text-2xl no-underline"
+        >
+          <span className="text-hulk mr-7">05</span>Deliveries
+        </a>
       </div>
-      <div className="w-full bg-footerBg rounded-[10px] py-8 px-6 mt-[120px]">
-        <h2 className="barlow font-normal text-base text-white opacity-50 uppercase">
-          Order Summary
-        </h2>
-        {plan.preferences === "capsule" ? noGridSummery : summery}
+      <div className="w-full flex flex-col items-center xl:w-[730px]">
+        <div className="w-full flex flex-col gap-y-[110px]">
+          <Question
+            plan={plan}
+            updatePlan={updatePlan}
+            property="preferences"
+            question="How do you drink your coffee?"
+            buttons={preferences}
+            disabled={false}
+          />
+          <Question
+            plan={plan}
+            updatePlan={updatePlan}
+            property="type"
+            question="What type of coffee?"
+            buttons={types}
+            disabled={false}
+          />
+          <Question
+            plan={plan}
+            updatePlan={updatePlan}
+            property="quantity"
+            question="How much would you like?"
+            buttons={quantities}
+            disabled={false}
+          />
+          <Question
+            plan={plan}
+            updatePlan={updatePlan}
+            property="grind"
+            question="Want us to grind them?"
+            buttons={grinds}
+            disabled={plan.preferences === "capsule"}
+          />
+          <Question
+            plan={plan}
+            updatePlan={updatePlan}
+            property="deliveries"
+            question="How often should we deliver?"
+            buttons={deliveries}
+            disabled={false}
+          />
+        </div>
+        <div className="w-full bg-footerBg rounded-[10px] py-8 px-6 mt-[120px] md:mt-[144px] md:py-7 md:px-11">
+          <h2 className="barlow font-normal text-base text-white opacity-50 uppercase">
+            Order Summary
+          </h2>
+          {summery}
+        </div>
+        <button
+          className="no-underline fraunces font-black text-lg leading-[25px] text-light px-8 py-4 rounded-md bg-hulk mt-10 disabled:opacity-50 xl:ml-auto"
+          disabled={!disabledBtn}
+          onClick={showModal}
+        >
+          Create your plan!
+        </button>
       </div>
-      <button className="no-underline fraunces font-black text-lg leading-[25px] text-light px-8 py-4 rounded-md bg-hulk mt-10">
-        Create your plan!
-      </button>
     </div>
   );
 };
