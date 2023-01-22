@@ -18,10 +18,17 @@ const SubscribePage = () => {
     property: keyof Subscribe,
     value: Subscribe[keyof Subscribe]
   ) => {
-    setPlan((state: Subscribe) => {
-      return { ...state, [property]: value };
-    });
+    if (property === "preferences" && value === "capsule") {
+      setPlan((state: Subscribe) => {
+        return { ...state, [property]: value, grind: null };
+      });
+    } else {
+      setPlan((state: Subscribe) => {
+        return { ...state, [property]: value };
+      });
+    }
   };
+  console.log(plan);
 
   return (
     <div className="w-full mt-[90px] px-6 md:mt-[119px] md:px-10 xl:px-20">

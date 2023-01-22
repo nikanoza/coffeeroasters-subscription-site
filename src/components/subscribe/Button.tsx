@@ -13,31 +13,21 @@ const Button: React.FC<PropsType> = ({
   onClick,
   active,
 }) => {
+  const bg = active ? "bg-hulk" : "bg-[#F4F1EB]";
+  const color = active ? "text-white" : "text-darkBlue";
+
   return (
     <button
       className={
-        "w-full p-6 rounded-lg outline-none border-none " + active
-          ? "bg-hulk"
-          : "bg-[#F4F1EB]"
+        "w-full p-6 rounded-lg outline-none border-none flex flex-col items-start " +
+        bg
       }
       onClick={() => onClick()}
     >
-      <h2
-        className={
-          "fraunces font-black capitalize text-2xl " + active
-            ? "text-white"
-            : "text-darkBlue"
-        }
-      >
+      <h2 className={"fraunces font-black capitalize text-2xl " + color}>
         {title}
       </h2>
-      <p
-        className={
-          "mt-2 barlow font-normal text-base " + active
-            ? "text-white"
-            : "text-darkBlue"
-        }
-      >
+      <p className={"mt-2 barlow font-normal text-base text-left " + color}>
         {description}
       </p>
     </button>
