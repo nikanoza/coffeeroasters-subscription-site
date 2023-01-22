@@ -30,7 +30,7 @@ const Question: React.FC<PropsType> = ({
     }
   }, [disabled]);
   return (
-    <div className={disabled ? "opacity-70" : ""}>
+    <div className={disabled ? "opacity-70" : ""} id={property}>
       <div className="flex items-center justify-between w-full">
         <p
           className="fraunces font-black text-2xl text-gray w-[240px]"
