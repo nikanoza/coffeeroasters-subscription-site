@@ -25,6 +25,7 @@ const useSummery = (plan: Subscribe, color: string) => {
       sent to me
       {
         <span className="text-hulk capitalize">
+          {" "}
           {plan.deliveries || "_____"}
         </span>
       }
