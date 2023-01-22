@@ -43,7 +43,7 @@ npm install
 3. To see project in action
 
 ```
-npm start
+npm run dev
 ```
 
 #
