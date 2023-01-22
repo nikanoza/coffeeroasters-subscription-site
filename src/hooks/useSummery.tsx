@@ -7,6 +7,7 @@ const useSummery = (plan: Subscribe, color: string) => {
       “I drink my coffee as
       {
         <span className="text-hulk capitalize">
+          {" "}
           {plan.preferences || "_____"}
         </span>
       }
@@ -48,6 +49,7 @@ const useSummery = (plan: Subscribe, color: string) => {
       , sent to me
       {
         <span className="text-hulk capitalize">
+          {" "}
           {plan.deliveries || "_____"}
         </span>
       }
