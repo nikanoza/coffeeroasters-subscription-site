@@ -20,7 +20,7 @@ const Steps: React.FC<{ items: StepType[]; notHome?: boolean }> = (props) => {
         <span className="w-8 h-8 rounded-full border-2 border-hulk z-20 bg-white"></span>
         <span className="w-8 h-8 rounded-full border-2 border-hulk z-20 bg-white"></span>
       </div>
-      <ul className="list-none flex flex-col items-center mt-20 gap-y-14 w-full md:flex-row md:gap-x-3 md:w-fit xl:gap-x-28">
+      <ul className="list-none flex mb-10 flex-col items-center mt-20 gap-y-14 w-full md:flex-row md:gap-x-3 md:w-fit xl:gap-x-28">
         {props.items.map((step) => {
           return (
             <Step
@@ -36,7 +36,7 @@ const Steps: React.FC<{ items: StepType[]; notHome?: boolean }> = (props) => {
       {!props.notHome ? (
         <Link
           to="/subscribe"
-          className="no-underline fraunces font-black text-lg leading-[25px] text-light px-8 py-4 rounded-md bg-hulk mt-20 md:mt-11"
+          className="no-underline fraunces font-black text-lg leading-[25px] text-light px-8 py-4 rounded-md bg-hulk md:mt-11"
         >
           Create your plan
         </Link>
