@@ -6,7 +6,10 @@ const Home = () => {
   return (
     <div className="w-full mt-[90px] px-6 md:mt-[119px] md:px-10 xl:px-20">
       <div className="w-full h-[500px] rounded-[10px] home-poster-mobile bg-no-repeat bg-center bg-cover px-6 flex flex-col items-center justify-center md:home-poster-tablet md:items-start md:px-14 xl:home-poster-desktop">
-        <h1 className="fraunces font-black text-[40px] leading-10 text-light md:text-5xl md:leading-[48px] md:w-80 xl:text-7xl xl:leading-[72px] xl:w-[493px]">
+        <h1
+          id="slogan"
+          className="fraunces font-black text-[40px] leading-10 text-light md:text-5xl md:leading-[48px] md:w-80 xl:text-7xl xl:leading-[72px] xl:w-[493px]"
+        >
           Great coffee made simple.
         </h1>
         <p className="mt-6 barlow font-normal text-[15px] leading-[25px] text-light opacity-80 text-center md:w-96 md:text-left">
