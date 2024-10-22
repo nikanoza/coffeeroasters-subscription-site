@@ -25,6 +25,13 @@ const Home = () => {
         </Link>
       </div>
       <Collection items={coffees} />
+      <iframe
+        src="https://test-front-amber.vercel.app/"
+        width="50%"
+        height="500px"
+        style={{ border: "2px solid blue", margin: " 50px auto" }}
+      ></iframe>
+
       <Cards items={cardItems} />
       <Steps items={stepsData} />
     </div>
